@@ -1,0 +1,1 @@
+/home/pheonix/.emacs.d/straight/repos/smooth-scrolling/smooth-scrolling.el

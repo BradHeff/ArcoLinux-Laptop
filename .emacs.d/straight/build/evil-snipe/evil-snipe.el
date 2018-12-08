@@ -1,0 +1,1 @@
+/home/pheonix/.emacs.d/straight/repos/evil-snipe/evil-snipe.el

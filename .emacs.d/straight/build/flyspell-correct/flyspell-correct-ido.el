@@ -1,0 +1,1 @@
+/home/pheonix/.emacs.d/straight/repos/flyspell-correct/flyspell-correct-ido.el

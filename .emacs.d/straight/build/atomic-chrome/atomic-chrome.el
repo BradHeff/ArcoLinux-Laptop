@@ -1,0 +1,1 @@
+/home/pheonix/.emacs.d/straight/repos/atomic-chrome/atomic-chrome.el

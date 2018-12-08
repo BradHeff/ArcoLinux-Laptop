@@ -1,0 +1,1 @@
+/home/pheonix/.emacs.d/straight/repos/evil-exchange/evil-exchange.el

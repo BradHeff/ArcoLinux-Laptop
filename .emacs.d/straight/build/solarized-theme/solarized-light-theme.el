@@ -1,0 +1,1 @@
+/home/pheonix/.emacs.d/straight/repos/solarized-emacs/solarized-light-theme.el

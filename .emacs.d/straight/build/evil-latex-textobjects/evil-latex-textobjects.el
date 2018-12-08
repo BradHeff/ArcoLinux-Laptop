@@ -1,0 +1,1 @@
+/home/pheonix/.emacs.d/straight/repos/evil-latex-textobjects/evil-latex-textobjects.el
