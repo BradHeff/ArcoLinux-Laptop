@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+[ ! -d ~/Pictures/Screenshots ] && mkdir -p ~/Pictures/Screenshots
+
+scrot -q 100 -e 'mv $f ~/Pictures/Screenshots/'
+
+notify-send -u normal "Screenshot"
+exit

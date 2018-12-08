@@ -1,0 +1,65 @@
+[global]
+   markup = full
+   plain_text = no
+   format = "<b>%s</b>\n%b"
+   sort = yes
+   indicate_hidden = yes
+   alignment = center
+   geometry = "250x35-40+60"
+   bounce_freq = 0
+   show_age_threshold = 60
+   word_wrap = yes
+   ignore_newline = no
+   shrink = false
+   transparency = 0
+   idle_threshold = 120
+   monitor = 0
+   follow = mouse
+   sticky_history = yes
+   history_length = 12
+   show_indicators = yes
+   line_height = 4
+   notification_height = 30
+   separator_height = 4
+   padding = 15
+   horizontal_padding = 20
+   separator_color = frame
+   startup_notification = false
+   rofi = /usr/bin/rofi -show run -p dunst:
+   browser = /usr/bin/firefox -new-tab
+   icon_position = left
+   max_icon_size = 32
+   #icon_path = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/
+   icon_path = /usr/share/icons/Sardi-Flexible/scalable/status/:/usr/share/icons/Sardi-Flexible/scalable/devices/
+   frame_width = 3
+   frame_color = "#6b7a85"
+
+[shortcuts]
+   close = ctrl+space
+   close_all = ctrl+shift+space
+   history = ctrl+grave
+	 context = ctrl+shift+period
+
+[urgency_low]
+    background = "#23262f"
+    foreground = "#ffffff"
+    frame_color = "#ffffff"
+    timeout = 10
+
+[urgency_normal]
+    background = "#23262f"
+    foreground = "#ffffff"
+    timeout = 10
+
+[urgency_critical]
+    background = "#23262f"
+    foreground = "#ffffff"
+    frame_color = "#c5241a"
+    timeout = 0
+
+[irc]
+    appname = "weechat"
+    format  = "<i>%s</i>\n%b"
+    urgency = low
+    background = "#23262f"
+    foreground = "#ffffff"

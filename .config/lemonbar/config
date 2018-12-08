@@ -1,0 +1,133 @@
+#!/usr/bin/env bash
+#
+# A simple block-style bar using lemonbar
+# and named pipes to reduce resource footprint
+#
+# Normally, this file is split into seperate files
+# for colors and bar defaults, I have included them
+# all together here for simplicity
+#
+#----------------------------------------------------------
+#				T R A N S P A R E N C Y
+#----------------------------------------------------------
+#100% — FF
+#95% — F2
+#90% — E6
+#85% — D9
+#80% — CC
+#75% — BF
+#70% — B3
+#65% — A6
+#60% — 99
+#55% — 8C
+#50% — 80
+#45% — 73
+#40% — 66
+#35% — 59
+#30% — 4D
+#25% — 40
+#20% — 33
+#15% — 26
+#10% — 1A
+#5% — 0D
+#0% — 00
+
+res_w=$(xrandr | grep "current" | awk '{print $8a}')
+
+WIDTH="${res_w}" # bar width
+HEIGHT=24 # bar height
+XOFF=0 # x offset
+YOFF=0 # y offset
+#BRDR=3 # border width
+#BRDRC=#0000000 # border color
+
+# color definitions 
+color_back="#B3282A36"              # Default background
+color_fore="#FFC5C8C6"              # Default foreground
+color_head="#FF82a4b3"              # Background for first element GREEN
+color_sec_b1="#FF282A2E"            # Background for section   DARK GREY
+color_sec_b2="#FF454A4F"            # Background for section 2 LIGHTISH GREY
+color_sec_b3="#FF60676E"            # Background for section 3 LIGHT GREY
+color_icon="#FF979997"              # For icons                 GREY
+color_pacman="#FFCE935F"              # Background color for mail alert
+color_yay="#FFCC6666"              # Background color for chat alert
+color_cpu="#FF5F819D"               # Background color for cpu alert
+color_vol_good="#FF82a4b3"          # Background color for volume OK
+color_vol_warn="#FFa3be8c"               # Background for volume WARN
+color_vol_alert="#FFf59360"              # Background color for volume ALERT
+color_disable="#FF1D1F21"           # Foreground for disable elements
+color_wsp="#FF8C9440"               # Background for selected workspace
+color_sunset="#FFf59360"            # Background music
+color_head2="#FFa3be8c"            # Background music
+
+color_bat_charge="#FF82a4b3"              # Background color for net alert
+color_bat_discharge="#FF5E8D87"               # Background color for net alert
+color_bat_warn="#FF5E8D87"               # Background color for net alert
+color_bat_good="#FF82a4b3"               # Background color for net alert
+color_bat_alert="#FFf59360"               # Background color for net alert
+
+
+BBG=${color_back} # bar background color
+BFG=${color_fore}
+
+if [ ${WIDTH} -gt 1024 ]; then
+  stab='  '
+else
+  stab=' '
+fi
+
+# Status constants
+# Change these to modify bar behavior
+DESKTOP_COUNT=5
+
+# Sleep constnats
+WORKSPACE_SLEEP=0.5
+VOLUME_SLEEP=1
+DATE_SLEEP=5
+TIME_SLEEP=1
+MUSIC_SLEEP=3
+VPN_SLEEP=3
+UPDATE_SLEEP=60
+WEATHER_SLEEP=3600
+BATTERY_SLEEP=3
+WIFI_SLEEP=3
+SYNC_SLEEP=5
+
+BATTERY_FULL="95"
+BATTERY_MID="50"
+
+# Char glyps for powerline fonts
+sep_left=""                        # Powerline separator left
+sep_right=""                       # Powerline separator right
+sep_l_left=""                      # Powerline light separator left
+sep_l_right=""                     # Powerline light sepatator right
+
+icon_clock=""                      # Clock icon
+icon_date=""						# Date icon
+icon_cpu=""                        # CPU icon
+icon_space=""                       # HD /home icon
+icon_mem=""                        # MEM icon
+icon_vol=""                        # Volume icon
+icon_vol_mute=""                        # Volume Mute icon
+icon_music=""                      # Music icon
+icon_update=""                    # Update Icon
+icon_pacman=""                     # Update Icon
+icon_vpn_off=""
+icon_vpn_on=""
+icon_bat_full=""
+icon_bat_halffull=""
+icon_bat_half=""
+icon_bat_halfflat=""
+icon_bat_flat=""
+icon_wifi=""
+icon_bright=""
+icon_synced=""
+icon_syncing=""
+icon_sync_error=""
+icon_share=""
+
+PANEL_FIFO=/tmp/panel-fifo
+FONTS_P="Inconsolata for Powerline:size=14"
+FONTS="Iosevka:size=12"
+ICONFONTS="FontAwesome:size=12"
+GEOMETRY="${WIDTH}x${HEIGHT}+${XOFF}+${YOFF}"
