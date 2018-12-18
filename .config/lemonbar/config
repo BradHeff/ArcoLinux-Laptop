@@ -35,9 +35,10 @@
 res_w=$(xrandr | grep "current" | awk '{print $8a}')
 
 WIDTH="${res_w}" # bar width
-HEIGHT=24 # bar height
+HEIGHT=28 # bar height
 XOFF=0 # x offset
 YOFF=0 # y offset
+VOFF=0 # text vertical offset
 #BRDR=3 # border width
 #BRDRC=#0000000 # border color
 
@@ -127,7 +128,7 @@ icon_sync_error=""
 icon_share=""
 
 PANEL_FIFO=/tmp/panel-fifo
-FONTS_P="Inconsolata for Powerline:size=14"
+FONTS_P="Inconsolata for Powerline:size=16"
 FONTS="Iosevka:size=12"
 ICONFONTS="FontAwesome:size=12"
 GEOMETRY="${WIDTH}x${HEIGHT}+${XOFF}+${YOFF}"

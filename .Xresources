@@ -25,15 +25,18 @@ URxvt*iconFile:  	/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
 !URxvt*background:        [70]#3F424A
 URxvt*background:        #282A36
 URxvt*foreground:        #F8F8FF
-URxvt*underlineColor:    #4682B4
-URxvt*highlightColor:    #4682B4
-URxvt*throughColor:      Blue
+URxvt*underlineColor:    #82a4b3
+URxvt*highlightColor:    #82a4b3
+URxvt*throughColor:      Green
 URxvt*cursorColor:       #c5c8c6
+URxvt.pointerBlank: 	 true
+URxvt.cursorBlink:       false
+URxvt.cursorUnderline:   false
 URxvt*scrollBar:         false
 URxvt*scrollTtyOutput:   false
 URxvt*scrollWithBuffer:  true
 URxvt*scrollTtyKeypress: true
-URxvt*internalBorder:    30
+URxvt*internalBorder:    42
 URxvt*externalBorder:    18
 URxvt*colorIT:      	 #87af5f
 URxvt*colorBD:      	 #c5c8c6
@@ -97,7 +100,7 @@ URxvt*urlLauncher:      	/usr/bin/firefox
 URxvt*underlineURLs:    	true
 !URxvt*urlButton:        	1
 URxvt.matcher.button:        1
-URxvt*geometry: 		88x23
+URxvt*geometry: 		67x17
 
 ! tabbed
 URxvt*tabbed.tabbar-fg: 	4
@@ -128,7 +131,7 @@ UXTerm*termName: 	   xterm-256color
 
 
 UXTerm*cursorColor:        white
-UXTerm*VT100.geometry:     88x23
+UXTerm*VT100.geometry:     88x16
 UXTerm*font:               Inconsolata
 !Monospace
 UXTerm*faceSize:	   12
@@ -166,6 +169,8 @@ UXTerm*color15: rgb:fc/fc/fc
 UXTerm*boldMode: false
 UXTerm*colorBDMode: true
 UXTerm*colorBD: rgb:3f/3f/3f
+
+Emacs.font: Iosevka:light:size=13
 
 twobwm.border_width: 8
 twobwm.outer_border: 5

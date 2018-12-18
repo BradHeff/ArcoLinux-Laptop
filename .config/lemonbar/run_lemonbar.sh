@@ -40,29 +40,29 @@ music > "${PANEL_FIFO}" &
 
 get_updates(){
     while true; do
-        if (( ${cnt} == 300 )); then
-            sudo pacman -Syy            
-            cnt=0
-        else
-            cnt=$((cnt + 1))
-        fi
+        #if (( ${cnt} == 300 )); then
+        #    sudo pacman -Syy            
+        #    cnt=0
+        #else
+        #    cnt=$((cnt + 1))
+        #fi
         
-        P_updates=`pacman -Qu | wc -l`
-        Y_updates=`yay -Qu | wc -l`
+        P_updates=`checkupdates | wc -l`
+#        Y_updates=`yay -Qu | wc -l`
         
         P_updates=${P_updates%% }
-        Y_updates=${Y_updates%% }
+#        Y_updates=${Y_updates%% }
         P_updates=${P_updates## }
-        Y_updates=${Y_updates## }
+#        Y_updates=${Y_updates## }
 
-        if (( "${P_updates}" > 0 )); then
+        if (( "${P_updates}" > 4 )); then
             echo "UPDATE %{F${color_pacman} B${color_sec_b2} T3}${sep_left}%{F${color_back} B${color_pacman} T2} ${icon_pacman} %{T1}${P_updates} %{F${color_sec_b2} B${color_pacman} T3}${sep_left}%{F- B${color_sec_b2} T1}"
         else
-            if (( "${Y_updates}" > 0 )); then
-                echo "UPDATE %{F${color_yay} B${color_sec_b2} T3}${sep_left}%{F${color_back} B${color_yay} T2} ${icon_update} %{T1}${Y_updates} %{F${color_sec_b2} B${color_yay} T3}${sep_left}%{F- B${color_sec_b2} T1}"
-            else
-                echo "UPDATE %{F${color_icon} B${color_sec_b2} T2} ${icon_update} %{F- T1}${P_updates} %{F- B${color_sec_b2} T1}"
-            fi
+ #           if (( "${Y_updates}" > 0 )); then
+ #               echo "UPDATE %{F${color_yay} B${color_sec_b2} T3}${sep_left}%{F${color_back} B${color_yay} T2} ${icon_update} %{T1}${Y_updates} %{F${color_sec_b2} B${color_yay} T3}${sep_left}%{F- B${color_sec_b2} T1}"
+ #           else
+           echo "UPDATE %{F${color_icon} B${color_sec_b2} T2} ${icon_update} %{F- T1}0 %{F- B${color_sec_b2} T1}"
+#            fi
         fi
         sleep ${UPDATE_SLEEP}
     done
@@ -334,4 +334,4 @@ while read -r line; do
     
     printf "%s\n" "%{l}${fn_work}${title} %{r}${fn_music}${stab}${fn_vpn}${fn_space}${fn_mem}${fn_cpu}${fn_update}${fn_weather}${fn_bright}${fn_vol}${fn_con}${fn_date}${stab}${fn_time}${fn_bat}"
 
-done < "${PANEL_FIFO}" | lemonbar -f "${FONTS}" -f "${ICONFONTS}" -f "${FONTS_P}" -g "${GEOMETRY}" -B "${BBG}" -F "${BFG}" | sh > /dev/null
+done < "${PANEL_FIFO}" | lemonbar -f "${FONTS}" -f "${ICONFONTS}" -f "${FONTS_P}" -g "${GEOMETRY}" -B "${BBG}" -F "${BFG}" -o "${VOFF}" | sh > /dev/null

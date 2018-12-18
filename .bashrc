@@ -29,11 +29,13 @@ COLOR_BLUE="\[$(tput setaf 4)\]"
 COLOR_PURPLE="\[$(tput setaf 5)\]"
 COLOR_CYAN="\[$(tput setaf 6)\]"
 COLOR_WHITE="\[$(tput setaf 7)\]"
+COLOR_BOLD="\[$(tput bold)\]"
 COLOR_RESET="\[$(tput sgr0)\]"
 
 
-PS1="${COLOR_RED}\$(SELECT)${COLOR_CYAN}[${COLOR_RESET}\\w${COLOR_CYAN}]-[${COLOR_RESET}\\@${COLOR_CYAN}]${COLOR_PURPLE}\$(precmd)
-${COLOR_YELLOW}>${COLOR_RESET} "
+#PS1="${COLOR_RED}\$(SELECT)${COLOR_CYAN}[${COLOR_RESET}\\w${COLOR_CYAN}]-[${COLOR_RESET}\\@${COLOR_CYAN}]${COLOR_PURPLE}\$(precmd)
+PS1="${COLOR_RED}\$(SELECT)${COLOR_GREEN}\\w ${COLOR_YELLOW}\$(precmd)
+${COLOR_GREEN}${COLOR_BOLD}::${COLOR_RESET} "
 
 mkcd() {
         if [ $# != 1 ]; then
@@ -103,19 +105,19 @@ deps() {
 gitclone() {
   if [[ "$1" -eq "gh" ]]
   then
-    git clone https://USERNAME:KEY@github.com/BradHeff/"$2".git
+    git clone https://BradHeff:TOKEN@github.com/BradHeff/"$2".git
   elif [[ "$1" -eq "gl" ]]
   then
-    git clone https://USERNAME:KEY@gitlab.com/BradHeff/"$2".git
+    git clone https://BradHeff:TOKEN@gitlab.com/BradHeff/"$2".git
   fi  
 }
 gitremote() {
   if [[ "$1" -eq "gh" ]]
   then
-    git remote add origin https://USERNAME:KEY@github.com/BradHeff/"$2".git
+    git remote add origin https://BradHeff:TOKEN@github.com/BradHeff/"$2".git
   elif [[ "$1" -eq "gl" ]]
   then
-    git remote add origin https://USERNAME:KEY@gitlab.com/BradHeff/"$2".git
+    git remote add origin https://BradHeff:TOKEN@gitlab.com/BradHeff/"$2".git
   fi  
 }
 dd() {
@@ -246,6 +248,7 @@ shopt -s expand_aliases # expand aliases
 #neofetch
 #clear && cowsay 'Welcome to ArcoLinuxD'
 export _JAVA_AWT_WM_NONREPARENTING=1
-clear && ~/.2bwm/info
+#clear && ~/.2bwm/info
+clear && bash ~/.2bwm/flowerfetch
 EDITOR=vim
 

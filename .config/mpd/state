@@ -1,9 +1,8 @@
 sw_volume: 100
 audio_device_state:1:mpd-alsa
 audio_device_state:1:toggle_visualizer
-state: play
-current: 1
-time: 9.049000
+state: stop
+current: 3
 random: 1
 repeat: 1
 single: 0
