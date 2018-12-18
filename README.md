@@ -23,12 +23,12 @@ PROGRAMS
 2BWM
 ---
 
-![Screenshot](Pictures/Screenshots/screen_2b1.png)
+![Screenshot](Pictures/Screenshots/screenshot_2b1.png)
 
-![Screenshot](Pictures/Screenshots/screen_2b2.png)
+![Screenshot](Pictures/Screenshots/screenshot_2b2.png)
 
-![Screenshot](Pictures/Screenshots/screen_2b3.png)
+![Screenshot](Pictures/Screenshots/screenshot_2b3.png)
 
-![Screenshot](Pictures/Screenshots/screen_2b4.png)
+![Screenshot](Pictures/Screenshots/screenshot_2b4.png)
 
-![Screenshot](Pictures/Screenshots/screen_2b5.png)
+![Screenshot](Pictures/Screenshots/screenshot_2b5.png)
