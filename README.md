@@ -32,3 +32,5 @@ PROGRAMS
 ![Screenshot](Pictures/Screenshots/screenshot_2b4.png)
 
 ![Screenshot](Pictures/Screenshots/screenshot_2b5.png)
+
+![Screenshot](Pictures/Screenshots/screenshot_2b6.png)
