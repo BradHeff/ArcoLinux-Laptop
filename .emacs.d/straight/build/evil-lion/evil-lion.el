@@ -1,1 +1,0 @@
-/home/pheonix/.emacs.d/straight/repos/evil-lion/evil-lion.el

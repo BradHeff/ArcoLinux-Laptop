@@ -1,1 +1,0 @@
-/home/pheonix/.emacs.d/straight/repos/bracketed-paste.el/bracketed-paste.el

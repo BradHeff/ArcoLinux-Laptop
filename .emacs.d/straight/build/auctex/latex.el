@@ -1,1 +1,0 @@
-/home/pheonix/.emacs.d/straight/repos/auctex/latex.el

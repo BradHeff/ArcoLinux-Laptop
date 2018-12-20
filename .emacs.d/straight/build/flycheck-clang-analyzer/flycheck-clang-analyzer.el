@@ -1,1 +1,0 @@
-/home/pheonix/.emacs.d/straight/repos/flycheck-clang-analyzer/flycheck-clang-analyzer.el

@@ -1,1 +1,0 @@
-/home/pheonix/.emacs.d/straight/repos/evil-quickscope/evil-quickscope.el
